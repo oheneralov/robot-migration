@@ -4,7 +4,7 @@ class Simulation2d extends React.Component {
 
     render(){
         return (
-            <div>2d simulation</div>
+            <div>it is 2d simulation</div>
         );
     }
 }

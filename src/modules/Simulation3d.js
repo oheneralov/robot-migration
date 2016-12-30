@@ -4,7 +4,7 @@ class Simulation3d extends React.Component {
 
     render(){
         return (
-            <div>3d simulation</div>
+            <div>it is 3d simulation</div>
         );
     }
 }
