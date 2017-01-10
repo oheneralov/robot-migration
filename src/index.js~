@@ -2,7 +2,6 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import Simulation2d from './modules/Simulation2d';
 import Simulation3d from './modules/Simulation3d';
-import Parser from './modules/Parser';
 import App from './App';
 import './index.css';
 import {Router, Route, IndexRoute, Link, hashHistory, BrowseHistory} from 'react-router';

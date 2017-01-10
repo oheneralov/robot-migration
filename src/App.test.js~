@@ -9,6 +9,7 @@ it('renders Simulation2d without crashing', () => {
 });
 
 it ('checks simulation2d output', () => {
+
     const renderer = ReactTestUtils.createRenderer();
     renderer.render(<Simulation2d />);
     const result = renderer.getRenderOutput();
