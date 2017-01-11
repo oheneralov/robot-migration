@@ -6,7 +6,7 @@ class Simulation2d extends React.Component {
     render(){
         return (
             <div>
-              <h2>it is 2d simulation</h2>
+              <Parser type="parrot2d"/>
             </div>
         );
     }
