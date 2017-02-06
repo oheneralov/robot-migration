@@ -1,5 +1,5 @@
 import * as d3 from './thirdparty/d3.js'
-import * as MathLib from './thirdparty/MathLib.js'
+import MathLib from './thirdparty/MathLib.js'
 
 class Parrot {
     constructor(place = "body", height = 300, width = 1000) {

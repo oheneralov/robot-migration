@@ -19,6 +19,11 @@ Parrot1->flyForward(10);
 	    elapsedTime: "00:00:00.000",
 		Parrot1 : null
 	};
+
+   this.handleChange = this.handleChange.bind(this);
+   this.startSimulation = this.startSimulation.bind(this);
+   this.stopSimulation = this.stopSimulation.bind(this);
+   this.repeatParrotLife = this.repeatParrotLife.bind(this);
   }
   
   handleChange(event) {
@@ -40,7 +45,11 @@ Parrot1->flyForward(10);
   }
   
   repeatParrotLife(startDate){
+          if (this.state === undefined){
+              console.log("Error! state is undefined");
+          }
 	  var interptetedCode = this.convertC2JS(this.state.code);
+          
 	  var Parrot1 = this.state.Parrot1;
 	  if (interptetedCode){
 	      eval(interptetedCode);
@@ -75,15 +84,15 @@ Parrot1->flyForward(10);
 		return number > 10 ? number : "0" + number;
 	}
  
-	 startSimulation(event) {
+	 startSimulation() {
 	     console.log("Starting simulation");
 	     var startDate = new Date();
 	     this.state.Parrot1.restoreAllStates();
-	     this.repeatParrotLife(startDate);
+	     //this.repeatParrotLife(startDate);
 	     this.state.Parrot1.lifeid = setInterval(this.repeatParrotLife, 300, startDate);
     }
 	
-	stopSimulation(event) {
+	stopSimulation() {
 		clearInterval(this.state.Parrot1.lifeid);
 		//$(".btn-success").attr("disabled", true);
     }
@@ -127,7 +136,7 @@ Parrot1->flyForward(10);
 		      <div id = {this.props.type}>
 			  </div>
 		  </p>
-		  <CommandPanel handleChange = {this.handleChange.bind(this)}  code = {this.state.code} type = {this.props.type} startSimulation = {this.startSimulation.bind(this)} stopSimulation = {this.stopSimulation.bind(this)}/>
+		  <CommandPanel onChange = {this.handleChange}  code = {this.state.code} type = {this.props.type} startSimulation = {this.startSimulation} stopSimulation = {this.stopSimulation}/>
         </form>
       </div>
     );

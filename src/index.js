@@ -13,7 +13,6 @@ ReactDOM.render(
    <Router history={hashHistory}>
     <Route path="/" component={App}>
       <IndexRoute path='/' component={Simulation2d} >
-          <Route path='/' component={Parser}/>
       </IndexRoute>
       <Route path='/simulation3d' component={Simulation3d} />
     </Route>
