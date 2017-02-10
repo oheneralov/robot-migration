@@ -2,7 +2,7 @@
  * @author Oleksandr Generalov http://robotbird.com.ua/
  */
 import * as THREE from './thirdparty/three.js'
-import * as MathLib from './thirdparty/MathLib.js'
+import MathLib from './thirdparty/MathLib.js'
 
 class Parrot3d {
     constructor(place = "body", height = 1000, width = 1800) {

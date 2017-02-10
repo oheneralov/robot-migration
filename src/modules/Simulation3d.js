@@ -1,10 +1,13 @@
 import React from 'react';
+import Parser from './Parser'
 
 class Simulation3d extends React.Component {
 
     render(){
         return (
-            <div>it is 3d simulation</div>
+            <div>
+              <Parser type="parrot3d"/>
+            </div>
         );
     }
 }
