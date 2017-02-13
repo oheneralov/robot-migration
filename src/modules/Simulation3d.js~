@@ -4,7 +4,9 @@ class Simulation3d extends React.Component {
 
     render(){
         return (
-            <div>3d simulation</div>
+            <div>
+              <Parser type="parrot3d"/>
+            </div>
         );
     }
 }

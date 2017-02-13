@@ -9,8 +9,8 @@ class App extends React.Component{
     return (
       <div>
         <ul>
-          <Link to="/" activeClassName = "activetab">2d simulation</Link>
-          <Link to="/simulation3d"  activeClassName = "activetab">3d simulation</Link>
+          <Link to="/" >2d simulation</Link>
+          <Link to="/simulation3d"  >3d simulation</Link>
         </ul>
         <div>{this.props.children}</div>
       </div>

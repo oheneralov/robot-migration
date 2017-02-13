@@ -460,7 +460,7 @@ class Parrot3d {
         //parrot is on earch and must take off
         if (self.flyForwardCount === 0) {
             self.takeoff();
-            $(".btn-primary").attr("disabled", true);
+            //$(".btn-primary").attr("disabled", true);
         }
 
         //moving wings
@@ -471,7 +471,7 @@ class Parrot3d {
             self.land();
             self.isPreviousActionfinished = true;
             clearInterval(this.lifeid);
-            $(".btn-primary").attr("disabled", false);
+            //$(".btn-primary").attr("disabled", false);
             return;
         }
 

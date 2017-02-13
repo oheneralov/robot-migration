@@ -23,6 +23,10 @@
   to { transform: rotate(360deg); }
 }
 
+.tab {
+    padding-right: 5px;
+}
+
 .activetab {
     padding-right: 5px;
     color: green;
