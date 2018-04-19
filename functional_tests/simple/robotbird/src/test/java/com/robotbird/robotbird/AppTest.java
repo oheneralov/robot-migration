@@ -63,7 +63,6 @@ public class AppTest extends TestCase {
 		try {
 			FileUtils.copyFile(src, new File("c:\\tmp\\screenshot2.png"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
 		BufferedImage imgPredefined = null;
@@ -71,7 +70,7 @@ public class AppTest extends TestCase {
 		try {
 			imgPredefined = ImageIO.read(new File("C:/tmp/screenshot1.png"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
+			
 			System.out.println("screenshot1 was not read!");
 			e.printStackTrace();
 		}
@@ -79,7 +78,6 @@ public class AppTest extends TestCase {
 		try {
 			siteimg = ImageIO.read(new File("C:/tmp/screenshot2.png"));
 		} catch (IOException e) {
-			// TODO Auto-generated catch block
 			System.out.println("screenshot2 was not read!");
 			e.printStackTrace();
 		}
