@@ -34,6 +34,19 @@ class HomePage {
 		return this.getTextByXPath(this.xpath2CodeHeader);
 	}
 	
+	getCommandButtonsValues(){
+		let startButtonValue = this.driver.findElement(By.className('btn btn-primary')).getText();
+		let stopButtonValue = this.driver.findElement(By.className('btn btn-success')).getText();
+		return {
+			startButton : startButtonValue,
+			stopButton: stopButtonValue
+		}
+	}
+	
+	getCodeAreaValue(){
+		return this.driver.findElement(By.className('code-input')).getText();
+	}
+	
 	close(){
 		this.driver.close();
 	}

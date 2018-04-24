@@ -40,9 +40,23 @@ describe("Tests home page", function() {
     });
 	
 	it("Tests code section  header", async function() {
-        let CodeSectionHeader = await homePage.getCodeSectionHeader;
-		let xpath = '/html/body/div[1]/div/div/div/div/div/form/div/div[1]';
+        let CodeSectionHeader = await homePage.getCodeSectionHeader();
 		expect(CodeSectionHeader).toBe('Code:');
+    });
+	
+	it("Tests start stop command buttons", async function() {
+        let startButton = await homePage.getCommandButtonsValues().startButton;
+		expect(startButton).toBe('Start simulation');
+    });
+	
+	it("Tests command buttons", async function() {
+        let stopButton = await homePage.getCommandButtonsValues().stopButton;
+		expect(stopButton).toBe('Stop simulation');
+    });
+	
+	it("Tests code area", async function() {
+        let codeArea = await homePage.getCodeAreaValue();
+		expect(codeArea).toBe('Parrot1->flyForward(10);');
     });
 
 
