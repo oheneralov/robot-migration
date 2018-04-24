@@ -37,8 +37,8 @@ class  CommandPanel extends Component{
 		        </div>
 			    {codeArea}
 		        <div>
-		            <button type = "button" className = "btn btn-primary" onClick={this.startSimulation}>Start simulation</button>
-		            <input type = "button" className = "btn btn-success" onClick={this.stopSimulation} value = "Stop simulation"/>
+		            <button type="button" className="btn btn-primary" onClick={this.startSimulation}>Start simulation</button>
+		            <button type="button" className="btn btn-success" onClick={this.stopSimulation}>Stop simulation</button>
 		        </div>
 				<div>
 		            Supported commands:
